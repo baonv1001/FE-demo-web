@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {MessageService} from "../service/message.service";
+import {Component} from '@angular/core';
+import {MessageService} from '../service/message.service';
+
 declare var SockJS;
 declare var Stomp;
 
@@ -13,10 +14,13 @@ export class AppComponent {
   input;
 
 
-  constructor(private messageService : MessageService) {
+  constructor(private messageService: MessageService) {
   }
 
-  sendMessage(){
-
+  sendMessage() {
+    if (this.input) {
+      this.messageService.sendMessage(this.input);
+      this.input = '';
+    }
   }
 }
