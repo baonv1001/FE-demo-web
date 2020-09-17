@@ -7,7 +7,7 @@ declare var Stomp;
   providedIn: 'root'
 })
 export class MessageService {
-  serverUrl: string = 'http://localhost:8100/ws';
+  serverUrl: string = 'http://localhost:8100/web-demo/ws';
   // topic: string = '/message';
   stompClient: any;
   public msg = [];
